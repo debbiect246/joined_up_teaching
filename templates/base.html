@@ -1,0 +1,107 @@
+<html>
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <!-- links to font awesome and style sheet -->
+    
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" type="text/css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" />
+    <link rel="icon" type="image/png" href=" /static/images/fireball-favicon.png" />
+   
+    <title>Caribbean Recipes</title>
+    
+</head>
+
+<body>
+    
+    <!-- Navigation --> 
+    <div class="row">
+        <nav class="navigation">
+            <ul>
+                <li><a href="{{ url_for('index') }}">Welcome</a></li>
+                <li><a href="{{ url_for('addrecipe') }}">Add Recipe</a></li>
+                <li><a href="{{ url_for('findrecipe')}}">Find Recipe</a></li>
+                <li><a href="{{ url_for('allrecipeslist') }}">All Recipes</a></li>
+            </ul>
+        </nav>
+    </div><html>
+    
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <meta http-equiv="X-UA-Compatible" content="ie=edge">
+            
+            <!-- links to font awesome and style sheet -->
+            
+            <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+            
+            <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" type="text/css" />
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" />
+            <link rel="icon" type="image/png" href=" /static/images/fireball-favicon.png" />
+           
+            <title>Caribbean Recipes</title>
+            
+        </head>
+        
+        <body>
+            
+            <!-- Navigation --> 
+            <div class="row">
+                <nav class="navigation">
+                    <ul>
+                        <li><a href="{{ url_for('index') }}">Log out</a></li>
+                        <li><a href="{{ url_for('psychteaching') }}">Psychology of Teaching</a></li>
+                        <li><a href="{{ url_for('stress')}}">Managing Stress</a></li>
+                        <li><a href="{{ url_for('admin') }}">Managing Admin</a></li>
+                        <li><a href="{{ url_for('contact') }}">Contact Me</a></li>
+                        <li><a href="{{ url_for('blog') }}">Blog</a></li>
+                    </ul>
+                </nav>
+            </div>
+            
+            {% block content %} {% endblock %}
+            
+            <!-- links to jquery and materializecss -->
+            
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+            
+            <!-- jquery to activate buttons -->
+            
+            <script type="text/javascript">
+                $(document).ready(function () {
+                    $('.collapsible').collapsible();
+                    $('select').material_select();
+                });
+            </script>
+        
+        </body>
+        
+        </html>
+    
+    {% block content %} {% endblock %}
+    
+    <!-- links to jquery and materializecss -->
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    
+    <!-- jquery to activate buttons -->
+    
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.collapsible').collapsible();
+            $('select').material_select();
+        });
+    </script>
+
+</body>
+
+</html>
