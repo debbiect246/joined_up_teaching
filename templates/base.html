@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>JoinedUpTeaching</title>
 
        
     <!-- links to font awesome and style sheet -->
@@ -25,9 +25,9 @@
         
         <!-- Navigation --> 
         <header>
-            <div class="container-fluid">
+            <div class="container-fluid text-lg-center">
                 <nav class="navbar navbar-expand-lg navbar-light bg-dark">
-                    <a class="navbar-brand" href="#">Navbar</a>
+                    <a class="navbar-brand" href="#">Logo</a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                       <span class="navbar-toggler-icon"></span>
                     </button>
@@ -50,6 +50,16 @@
                 
             </div>
         </header>
+
+        <div class="jumbotron">
+            <h1 class="display-4">
+          		{% if title %}
+          		  {{ title }}
+          		{% else %}
+          		  Default title
+          		{% endif %}
+	        </h1>
+        </div>
 
         <div class="container">
             {% block content %}

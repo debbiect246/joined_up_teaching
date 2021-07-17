@@ -1,1 +1,9 @@
 /* Customize the navbar links to be fill the entire space of the .navbar */
+* {
+    box-sizing: border-box;
+  }
+
+
+.nav {
+    height: 10%;
+}
