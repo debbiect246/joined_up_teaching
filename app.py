@@ -1,7 +1,9 @@
 import os
-from flask import Flask, render_template, url_for
+from flask import Flask, render_template, url_for, request
+from forms import ContactForm
 
 app = Flask(__name__)
+app.secret_key = "161 newkey"
 
 #building urls for endopoints below
 # url for home page
@@ -29,9 +31,20 @@ def admin():
     return render_template('admin.html', title = "Managing Admin")
 
 #url for contact page
-@app.route('/contact/')
+#links to contactFrom created in forms.py
+#remember to call Form class with () brackets or will get a self error!
+#use get and post so that information will be posted to server and then onto email.
+#hidden tag in form enabling csrf protection.
+#render template renders contact template which is displayed on screen.
+
+@app.route('/contact/', methods=['GET', 'POST'])
 def contact():
-    return render_template('contact.html', title= "Contact Me")
+    form = ContactForm
+
+    if request.method =='POST':
+        return 'Form posted.'
+    elif request.method =='GET':
+        return render_template('contact.html', title= "Contact Us", form=form())
 
 #url for blog page
 @app.route('/blog/')
