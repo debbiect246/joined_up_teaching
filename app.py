@@ -1,5 +1,5 @@
 import os
-from flask import Flask, render_template, url_for, request
+from flask import Flask, render_template, url_for, request, flash
 from forms import ContactForm
 
 app = Flask(__name__)
@@ -25,7 +25,7 @@ def psychteaching():
 def stress():
     return render_template('stress.html', title = "Dealing with Stress")
 
-#url for admnin page
+#url for admin page
 @app.route('/admin/')
 def admin():
     return render_template('admin.html', title = "Managing Admin")
