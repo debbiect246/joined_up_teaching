@@ -1,9 +1,14 @@
 import os
 from flask import Flask, render_template, url_for, request, flash
 from forms import ContactForm
+from flask_mail import Mail, Message
+
+
 
 app = Flask(__name__)
 app.secret_key = "161 newkey"
+
+mail = Mail(app)
 
 #building urls for endopoints below
 # url for home page
@@ -39,6 +44,7 @@ def admin():
 
 @app.route('/contact/', methods=['GET', 'POST'])
 def contact():
+    
     form = ContactForm
 
     if request.method =='POST':
