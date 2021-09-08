@@ -55,7 +55,7 @@ def contact():
 #url for blog page
 @app.route('/blog/')
 def blog():
-    return render_template('blog.html', title = "Blog")
+    return render_template('blog.html', title = "Good teaching")
 
 if __name__ =='__ main__':
     app.run
